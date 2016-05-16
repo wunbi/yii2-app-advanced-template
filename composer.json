@@ -43,5 +43,11 @@
             "type": "vcs",
             "url": "https://github.com/RockieLin/yii2-app-advanced-template"
         }
-    ]
+    ],
+    "extra": {
+        "asset-installer-paths": {
+            "npm-asset-library": "vendor/npm",
+            "bower-asset-library": "vendor/bower"
+        }
+    }
 }
