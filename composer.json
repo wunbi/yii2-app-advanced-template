@@ -1,6 +1,6 @@
 {
     "name": "rockielin/yii2-app-advanced-template",
-    "description": "Yii2 advanced template for test",
+    "description": "Yii2 advanced template for demo",
     "type": "project",
     "keywords": ["yii2", "framework", "advanced", "project template"],
     "license": "BSD-3-Clause",
