@@ -1,6 +1,7 @@
 Yii 2 Advanced Project Template
 ===============================
-Advanced Project Template for demo, just practice dont use in production.
+Advanced Project Template for demo, include frontend and backend(with RBAC authorization),
+just practice dont use in production.
 
 INSTALLATION
 ------------
