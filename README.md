@@ -1,6 +1,6 @@
 Yii 2 Advanced Project Template
 ===============================
-Advanced Project Template for test
+Advanced Project Template for demo, just practice dont use in production.
 
 INSTALLATION
 ------------

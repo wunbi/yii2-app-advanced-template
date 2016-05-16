@@ -35,8 +35,6 @@ class MemberSearch extends Member {
             'password',
             'email',
             'name',
-            'nickname',
-            'barcode',
             'query_start',
             'query_end',
             'keyword'],
@@ -105,13 +103,7 @@ class MemberSearch extends Member {
                     $this->email])
                 ->andFilterWhere(['like',
                     'name',
-                    $this->name])
-                ->andFilterWhere(['like',
-                    'nickname',
-                    $this->nickname])
-                ->andFilterWhere(['like',
-                    'barcode',
-                    $this->barcode]);
+                    $this->name]);
 
         if ($this->query_start) {
             $query->andWhere("createtime >= :starttime")
@@ -127,7 +119,7 @@ class MemberSearch extends Member {
         }
 
         if ($this->keyword) {
-            $query->andWhere("id LIKE :keyword OR username LIKE :keyword OR name LIKE :keyword OR nickname LIKE :keyword OR email LIKE :keyword")
+            $query->andWhere("id LIKE :keyword OR username LIKE :keyword OR name LIKE :keyword OR email LIKE :keyword")
                     ->addParams([":keyword" => "%{$this->keyword}%"]);
         }
 

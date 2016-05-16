@@ -10,11 +10,6 @@ class AnnounceController extends BaseController {
     }
 
     public function actionIndex($keyword = null) {
-        if ($keyword) {
-            Yii::$app->params["tmpKeyword"] = $keyword;
-        } else {
-            $this->layout = "announce";
-        }
         Yii::$app->params["tmpType"] = null;
 
         Yii::$app->tool->setPageMetaData("資訊公告");

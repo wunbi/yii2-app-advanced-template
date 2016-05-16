@@ -111,8 +111,7 @@ use yii\helpers\Url;
         <div class="form-group">
             <button type="submit" class="btn btn-primary"><i class="fa fa-check-circle"></i>&nbsp;&nbsp;確認送出</button>
             <a class="btn btn-default" href="<?=
-            Yii::$app->tool->toBaseUrl(["index",
-                "type" => $model->type]);
+            Yii::$app->tool->toBaseUrl(["index"]);
 
             ?>"><i class="fa fa-times"></i>&nbsp;&nbsp;返回</a>
         </div>

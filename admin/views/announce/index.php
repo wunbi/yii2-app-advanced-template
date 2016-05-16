@@ -13,8 +13,7 @@ $this->registerCss(".layout-app .col-separator{background-color: transparent;}")
             <div class="col-xs-12 col-md-12">
                 <p>
                     <?=
-                    $this->render('_search', ['model' => $searchModel,
-                        'type'  => $type,]);
+                    $this->render('_search', ['model' => $searchModel]);
 
                     ?>
                 </p>
@@ -25,8 +24,7 @@ $this->registerCss(".layout-app .col-separator{background-color: transparent;}")
         <div class="widget-body row">
             <div class="col-xs-12 col-md-12">
                 <p>
-                    <?= Html::a('新增', ['create',
-                        'type' => $type,], ['class' => 'btn btn-primary'])
+                    <?= Html::a('新增', ['create'], ['class' => 'btn btn-primary'])
 
                     ?>
                 </p>

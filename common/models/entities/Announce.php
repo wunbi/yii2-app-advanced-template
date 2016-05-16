@@ -6,7 +6,6 @@ use Yii;
  * This is the model class for table "announce".
  *
  * @property integer $id
- * @property string $type
  * @property string $title
  * @property string $content
  * @property string $image
@@ -29,7 +28,6 @@ class Announce extends \common\models\entities\Base {
     public function rules() {
         return [
             [[
-            'type',
             'title',
             'start_time',
             'end_time',
@@ -41,8 +39,6 @@ class Announce extends \common\models\entities\Base {
                 'string'],
             [[
             'status',
-            'start_time',
-            'end_time',
             'modtime',
             'createtime'],
                 'integer'],
@@ -66,7 +62,6 @@ class Announce extends \common\models\entities\Base {
     public function attributeLabels() {
         return [
             'id'         => 'ID',
-            'type'       => '分類',
             'status'     => '啟用狀態',
             'title'      => '標題',
             'content'    => '內文',
@@ -95,6 +90,14 @@ class Announce extends \common\models\entities\Base {
         $keyword[] = $this->image;
         $this->keyword = implode("", $keyword);
         $this->keyword = str_replace(" ", "", $this->keyword);
+
+        if ($this->start_time !== (int)$this->start_time) {
+            $this->start_time = strtotime($this->start_time);
+        }
+
+        if ($this->end_time !== (int)$this->end_time) {
+            $this->end_time = strtotime($this->end_time);
+        }
 
         return parent::beforeSave($insert);
     }

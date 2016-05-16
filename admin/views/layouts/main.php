@@ -7,7 +7,7 @@ use common\widgets\Alert;
 $user = Yii::$app->user;
 
 $asset = SkinDarkAsset::register($this);
-$this->registerJsFile('/js/main.js', ['depends' => [\yii\web\JqueryAsset::className()]]);
+$this->registerJsFile('js/main.js', ['depends' => [\yii\web\JqueryAsset::className()]]);
 $this->registerJs('$("textarea").autosize();');
 $staticUrl = Yii::$app->params["staticFileUrl"];
 $this->beginPage()

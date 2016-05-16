@@ -4,8 +4,7 @@ use yii\widgets\ActiveForm;
 use yii\helpers\Html;
 
 $form = ActiveForm::begin([
-            'action' => ['index',
-                'type' => $type,],
+            'action' => ['index'],
             'method' => 'get',
             'id'     => 'searchForm'
         ]);

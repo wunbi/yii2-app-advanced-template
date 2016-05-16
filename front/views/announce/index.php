@@ -1,11 +1,6 @@
 <?php
 
 use nirvana\infinitescroll\InfiniteScrollPager;
-if(Yii::$app->controller->layout == "announce"){
-   $this->registerCssFile("/css/frame_3.css", ['depends' => [front\assets\Main1Asset::className()],]); 
-}
-
-$this->registerCss("body{ height: auto; } html, body{ overflow: scroll; }");
 
 ?>
 

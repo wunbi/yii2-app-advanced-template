@@ -1,10 +1,6 @@
 <?php
-$this->beginContent('@app/views/layouts/menu.php');
+$this->beginContent('@app/views/layouts/base.php');
 
 ?>
-
-<div class="content">
-    <label for="AsideChecker"></label>
-    <?= $content; ?>
-</div>
+<?= $content; ?>
 <?php $this->endContent(); ?>

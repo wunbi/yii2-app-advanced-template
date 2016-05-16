@@ -22,7 +22,6 @@ class AnnounceController extends BaseController {
     public function actionIndex() {
 
         $searchModel = new AnnounceSearch();
-        $searchModel->isVideo = false;
         $this->title = '資訊發佈';
 
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
@@ -78,7 +77,6 @@ class AnnounceController extends BaseController {
     public function actionUpdate($id) {
         $model = $this->findModel($id);
 
-        $type = $model->type;
         $this->title = '資訊發佈';
 
         if ($model->load(Yii::$app->request->post())) {
