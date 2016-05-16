@@ -1,0 +1,2 @@
+#Crontab setting 記錄, 另需去系統設定crontab
+0 */3 * * *  php /var/www/html/yii2-app-advanced-template/yii job/action-name
