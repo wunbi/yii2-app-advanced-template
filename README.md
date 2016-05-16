@@ -3,6 +3,9 @@ Yii 2 Advanced Project Template
 Advanced Project Template for demo, include frontend and backend(with RBAC authorization),
 just practice dont use in production.
 
+[![Latest Stable Version](https://poser.pugx.org/rockielin/yii2-app-advanced-template/v/stable.png)](https://packagist.org/packages/rockielin/yii2-app-advanced-template)
+[![Total Downloads](https://poser.pugx.org/rockielin/yii2-app-advanced-template/downloads.png)](https://packagist.org/packages/rockielin/yii2-app-advanced-template)
+
 INSTALLATION
 ------------
 
