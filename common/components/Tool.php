@@ -276,7 +276,7 @@ class Tool extends Component {
 
     public function renderPageTitle() {
         $result = array_reverse(Yii::$app->controller->title);
-        $result[] = "飢餓三十行動APP";
+        $result[] = Yii::$app->params["title"];
 
         return (YII_ENV_DEV ? "Sandbox " : "") . implode(" | ", $result);
     }

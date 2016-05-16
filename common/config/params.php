@@ -1,5 +1,6 @@
 <?php
 return [
+    "title"              => "Site Title",
     'noReplyEmail'       => ['noreply@domain.com' => "No Reply Mail"],
     'adminEmail'         => [
         'xxx@domain.com'],
