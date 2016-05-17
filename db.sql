@@ -38,7 +38,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`id`, `username`, `password`, `name`, `status`, `role`, `modtime`, `createtime`) VALUES
-(1, 'rockie.lin.tw@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '落雞零', 1, 1, 1457495630, 1300000000),
+(1, 'example@example.com', 'e10adc3949ba59abbe56e057f20f883e', '主帳號', 1, 1, 1457495630, 1300000000),
 (2, 'aa@aa.aa', 'e10adc3949ba59abbe56e057f20f883e', '副帳號1', 1, 2, 1458859085, 1458859085),
 (3, 'bb@bb.bb', 'e10adc3949ba59abbe56e057f20f883e', '副帳號2', 1, 3, 1458859108, 1458859108);
 
