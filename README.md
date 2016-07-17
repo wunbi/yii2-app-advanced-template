@@ -19,7 +19,7 @@ at [getcomposer.org](http://getcomposer.org/doc/00-intro.md#installation-nix).
 You can then install the application using the following command:
 
 ~~~
-php composer.phar global require "fxp/composer-asset-plugin:~^1.0"
+php composer.phar global require "fxp/composer-asset-plugin:~1.1"
 php composer.phar create-project --prefer-dist --stability=dev rockielin/yii2-app-advanced-template project-name
 ~~~
 
