@@ -53,7 +53,7 @@ CREATE TABLE `announce` (
   `status` int(1) NOT NULL DEFAULT '1' COMMENT '啟用狀態',
   `title` varchar(255) NOT NULL COMMENT '標題',
   `content` longtext NOT NULL COMMENT '內文',
-  `image` varchar(255) DEFAULT NULL COMMENT AS `圖片`,
+  `image` varchar(255) DEFAULT NULL COMMENT '圖片',
   `keyword` longtext COMMENT '關鍵字',
   `start_time` int(10) NOT NULL COMMENT '開始時間',
   `end_time` int(10) NOT NULL COMMENT '結束時間',
@@ -185,8 +185,8 @@ CREATE TABLE `member` (
   `email` varchar(100) NOT NULL COMMENT 'Email',
   `name` varchar(100) NOT NULL COMMENT '真實姓名',
   `status` int(1) NOT NULL COMMENT '0:停用 1:Email未認證 2:已認證',
-  `modtime` int(10) DEFAULT NULL COMMENT AS `最後修改`,
-  `createtime` int(100) DEFAULT NULL COMMENT AS `建立時間`
+  `modtime` int(10) DEFAULT NULL COMMENT '最後修改',
+  `createtime` int(100) DEFAULT NULL COMMENT '建立時間'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
