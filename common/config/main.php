@@ -1,11 +1,11 @@
 <?php
 $params = require(__DIR__ . '/params.php');
-$params["staticFileUrl"] = "http://common.domain.com";
+$params["staticFileUrl"] = "http://fbcommon.happygomap.com";
 
 $dbHost = "127.0.0.1";
-$dbName = "advanced-template";
-$dbUsername = "username";
-$dbPassword = "passwod";
+$dbName = "happygo_avatar";
+$dbUsername = "mkt_user";
+$dbPassword = "ddim@mkt";
 
 $other_config = [];
 
@@ -97,7 +97,7 @@ $config = [
 //                    ],
                     'sourcePath' => null, // do not publish the bundle
                     'js'         => [
-                        '//ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js',
+                        '//ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js',
                     ]
                 ],
             ],
@@ -111,8 +111,8 @@ $config = [
                 'facebook' => [
                     'name'         => 'facebook',
                     'class'        => 'yii\authclient\clients\Facebook',
-                    'clientId'     => 'facebook app id',
-                    'clientSecret' => 'facebook app secret',
+                    'clientId'     => '689115637784686',
+                    'clientSecret' => '7140096346283c50ac6a5dd06763cc2a',
                     'scope'        => 'email,public_profile,user_friends',
                     'authUrl'      => 'https://www.facebook.com/dialog/oauth',
                     'viewOptions'  => ['popupWidth'  => 500,
