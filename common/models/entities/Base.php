@@ -20,13 +20,13 @@ class Base extends ActiveRecord {
 
     public function beforeSave($insert) {
         if ($this->isNewRecord) {
-            if ($this->hasAttribute("createtime")) {
-                $this->createtime = time();
+            if ($this->hasAttribute("created_at")) {
+                $this->created_at = time();
             }
         }
 
-        if ($this->hasAttribute("modtime")) {
-            $this->modtime = time();
+        if ($this->hasAttribute("updated_at")) {
+            $this->updated_at = time();
         }
 
         return parent::beforeSave($insert);

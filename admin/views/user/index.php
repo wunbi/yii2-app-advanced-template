@@ -55,10 +55,10 @@ $this->registerCss(".layout-app .col-separator{background-color: transparent;}")
                             },
                         ),
                         array(
-                            'attribute' => "createtime",
+                            'attribute' => "created_at",
                             'format'    => 'raw',
                             'value'     => function($data) {
-                                return date("Y/m/d H:i", $data->createtime);
+                                return date("Y/m/d H:i", $data->created_at);
                             }
                         ),
                         [

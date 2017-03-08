@@ -10,8 +10,8 @@ use Yii;
  * @property string $content
  * @property string $image
  * @property string $keyword
- * @property integer $modtime
- * @property integer $createtime
+ * @property integer $updated_at
+ * @property integer $created_at
  */
 class Announce extends \common\models\entities\Base {
 
@@ -39,8 +39,8 @@ class Announce extends \common\models\entities\Base {
                 'string'],
             [[
             'status',
-            'modtime',
-            'createtime'],
+            'updated_at',
+            'created_at'],
                 'integer'],
             [[
             'title',
@@ -69,8 +69,8 @@ class Announce extends \common\models\entities\Base {
             'start_time' => '開始時間',
             'end_time'   => '結束時間',
             'keyword'    => '關鍵字',
-            'modtime'    => '最後修改',
-            'createtime' => '建立時間',
+            'updated_at'    => '最後修改',
+            'created_at' => '建立時間',
         ];
     }
 

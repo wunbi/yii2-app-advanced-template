@@ -13,8 +13,8 @@ use yii\web\IdentityInterface;
  * @property string $name
  * @property string $image
  * @property integer $status
- * @property integer $modtime
- * @property integer $createtime
+ * @property integer $updated_at
+ * @property integer $created_at
  */
 class Admin extends \common\models\entities\Base implements IdentityInterface {
 
@@ -45,8 +45,8 @@ class Admin extends \common\models\entities\Base implements IdentityInterface {
             [[
             'status',
             'role',
-            'modtime',
-            'createtime'],
+            'updated_at',
+            'created_at'],
                 'integer'],
             [[
             'username'],
@@ -82,8 +82,8 @@ class Admin extends \common\models\entities\Base implements IdentityInterface {
             'name'       => '名稱',
             'role'       => '角色',
             'status'     => '啟用狀態',
-            'modtime'    => '最後修改',
-            'createtime' => '建立時間',
+            'updated_at'    => '最後修改',
+            'created_at' => '建立時間',
         ];
     }
 

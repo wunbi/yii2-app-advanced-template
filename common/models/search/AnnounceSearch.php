@@ -27,8 +27,8 @@ class AnnounceSearch extends Announce {
             'start_time',
             'end_time',
             'status',
-            'modtime',
-            'createtime'],
+            'updated_at',
+            'created_at'],
                 'integer'],
             [[
             'title',
@@ -89,8 +89,8 @@ class AnnounceSearch extends Announce {
             'id'          => $this->id,
             'start_time'  => $this->start_time,
             'end_time'    => $this->end_time,
-            'modtime'     => $this->modtime,
-            'createtime'  => $this->createtime,
+            'updated_at'     => $this->updated_at,
+            'created_at'  => $this->created_at,
         ]);
 
         $query->andFilterWhere(['like',

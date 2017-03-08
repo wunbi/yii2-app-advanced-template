@@ -11,7 +11,7 @@ use Yii;
  * @property string $email
  * @property string $type
  * @property string $other
- * @property integer $createtime
+ * @property integer $created_at
  */
 class EmailCheckCodes extends \common\models\entities\Base {
 
@@ -36,7 +36,7 @@ class EmailCheckCodes extends \common\models\entities\Base {
                 'required'],
             [[
             'member_id',
-            'createtime'],
+            'created_at'],
                 'integer'],
             [[
             'email'],
@@ -71,7 +71,7 @@ class EmailCheckCodes extends \common\models\entities\Base {
             'email'      => 'Email',
             'type'       => '類型',
             'other'      => '其他',
-            'createtime' => '建立時間',
+            'created_at' => '建立時間',
         ];
     }
 

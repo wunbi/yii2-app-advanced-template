@@ -25,8 +25,8 @@ class NotificationSearch extends Notification {
             [[
             'id',
             'admin_id',
-            'modtime',
-            'createtime'],
+            'updated_at',
+            'created_at'],
                 'integer'],
             [[
             'content',
@@ -83,8 +83,8 @@ class NotificationSearch extends Notification {
         $query->andFilterWhere([
             'id'         => $this->id,
             'admin_id'   => $this->admin_id,
-            'modtime'    => $this->modtime,
-            'createtime' => $this->createtime,
+            'updated_at'    => $this->updated_at,
+            'created_at' => $this->created_at,
         ]);
 
         $query->andFilterWhere(['like',

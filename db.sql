@@ -29,15 +29,15 @@ CREATE TABLE `admin` (
   `name` varchar(80) NOT NULL COMMENT '名稱',
   `status` int(1) NOT NULL DEFAULT '1' COMMENT '啟用狀態',
   `role` int(1) NOT NULL DEFAULT '1' COMMENT '1: 主管理員 2: 副管理員',
-  `modtime` int(10) NOT NULL,
-  `createtime` int(10) NOT NULL
+  `updated_at` int(10) NOT NULL,
+  `created_at` int(10) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='管理者帳號';
 
 --
 -- Dumping data for table `admin`
 --
 
-INSERT INTO `admin` (`id`, `username`, `password`, `name`, `status`, `role`, `modtime`, `createtime`) VALUES
+INSERT INTO `admin` (`id`, `username`, `password`, `name`, `status`, `role`, `updated_at`, `created_at`) VALUES
 (1, 'example@example.com', 'e10adc3949ba59abbe56e057f20f883e', '主帳號', 1, 1, 1457495630, 1300000000),
 (2, 'aa@aa.aa', 'e10adc3949ba59abbe56e057f20f883e', '副帳號1', 1, 2, 1458859085, 1458859085),
 (3, 'bb@bb.bb', 'e10adc3949ba59abbe56e057f20f883e', '副帳號2', 1, 3, 1458859108, 1458859108);
@@ -57,15 +57,15 @@ CREATE TABLE `announce` (
   `keyword` longtext COMMENT '關鍵字',
   `start_time` int(10) NOT NULL COMMENT '開始時間',
   `end_time` int(10) NOT NULL COMMENT '結束時間',
-  `modtime` int(10) NOT NULL,
-  `createtime` int(10) NOT NULL
+  `updated_at` int(10) NOT NULL,
+  `created_at` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `announce`
 --
 
-INSERT INTO `announce` (`id`, `status`, `title`, `content`, `image`, `keyword`, `start_time`, `end_time`, `modtime`, `createtime`) VALUES
+INSERT INTO `announce` (`id`, `status`, `title`, `content`, `image`, `keyword`, `start_time`, `end_time`, `updated_at`, `created_at`) VALUES
 (1, 1, 'title', '<p>test</p><p>lalala</p><p><img src="http://common.domain.com/uploads/announce/56f46a4ba4674.jpg"></p>', 'http://common.domain.com/uploads/announce/1458858583.jpg', 'titletestlalalahttp://common.domain.com/uploads/announce/1458858583.jpg', 1462204800, 1490716800, 1458858583, 1458858583);
 
 -- --------------------------------------------------------
@@ -168,7 +168,7 @@ CREATE TABLE `email_check_codes` (
   `email` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `type` varchar(20) CHARACTER SET utf8 NOT NULL DEFAULT 'email',
   `other` varchar(20) CHARACTER SET utf8 DEFAULT NULL,
-  `createtime` int(10) NOT NULL
+  `created_at` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Email驗證欄碼';
 
 -- --------------------------------------------------------
@@ -185,15 +185,15 @@ CREATE TABLE `member` (
   `email` varchar(100) NOT NULL COMMENT 'Email',
   `name` varchar(100) NOT NULL COMMENT '真實姓名',
   `status` int(1) NOT NULL COMMENT '0:停用 1:Email未認證 2:已認證',
-  `modtime` int(10) DEFAULT NULL COMMENT '最後修改',
-  `createtime` int(100) DEFAULT NULL COMMENT '建立時間'
+  `updated_at` int(10) DEFAULT NULL COMMENT '最後修改',
+  `created_at` int(100) DEFAULT NULL COMMENT '建立時間'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `member`
 --
 
-INSERT INTO `member` (`id`, `social_type`, `username`, `password`, `email`, `name`, `status`, `modtime`, `createtime`) VALUES
+INSERT INTO `member` (`id`, `social_type`, `username`, `password`, `email`, `name`, `status`, `updated_at`, `created_at`) VALUES
 (1, 'email', 'rockie.lin.tw@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 'rockie.lin.tw@gmail.com', '林落雞', 2, 1458858955, 1450000000);
 
 --
@@ -214,7 +214,7 @@ ALTER TABLE `admin`
 ALTER TABLE `announce`
   ADD PRIMARY KEY (`id`),
   ADD KEY `status` (`status`),
-  ADD KEY `modtime` (`modtime`),
+  ADD KEY `updated_at` (`updated_at`),
   ADD KEY `start_time` (`start_time`),
   ADD KEY `end_time` (`end_time`);
 
@@ -265,7 +265,7 @@ ALTER TABLE `member`
   ADD KEY `name` (`name`),
   ADD KEY `status` (`status`),
   ADD KEY `social_type` (`social_type`),
-  ADD KEY `createtime` (`createtime`);
+  ADD KEY `created_at` (`created_at`);
 
 --
 -- AUTO_INCREMENT for dumped tables

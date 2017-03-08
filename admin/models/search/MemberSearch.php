@@ -26,8 +26,8 @@ class MemberSearch extends Member {
             [[
             'id',
             'status',
-            'modtime',
-            'createtime'],
+            'updated_at',
+            'created_at'],
                 'integer'],
             [[
             'social_type',
@@ -85,8 +85,8 @@ class MemberSearch extends Member {
         $query->andFilterWhere([
             'id'         => $this->id,
             'status'     => $this->status,
-            'modtime'    => $this->modtime,
-            'createtime' => $this->createtime,
+            'updated_at'    => $this->updated_at,
+            'created_at' => $this->created_at,
         ]);
 
         $query->andFilterWhere(['like',
@@ -106,13 +106,13 @@ class MemberSearch extends Member {
                     $this->name]);
 
         if ($this->query_start) {
-            $query->andWhere("createtime >= :starttime")
+            $query->andWhere("created_at >= :starttime")
                     ->addParams([":starttime" => strtotime($this->query_start)]);
         } else {
             $this->query_start = null;
         }
         if ($this->query_end) {
-            $query->andWhere("createtime <= :endtime")
+            $query->andWhere("created_at <= :endtime")
                     ->addParams([":endtime" => strtotime($this->query_end)]);
         } else {
             $this->query_end = null;

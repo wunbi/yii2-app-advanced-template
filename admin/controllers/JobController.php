@@ -23,7 +23,7 @@ class JobController extends \yii\console\Controller {
     public function actionClearEmailCheckcode() {
         $expireTime = time() - (Yii::$app->params["checkCodeExpired"]);
 
-        \common\models\entities\EmailCheckCodes::deleteAll("createtime < {$expireTime}");
+        \common\models\entities\EmailCheckCodes::deleteAll("created_at < {$expireTime}");
 
         echo Yii::$app->controller->action->id . " Done!! \n\r";exit;
     }
@@ -34,7 +34,7 @@ class JobController extends \yii\console\Controller {
      */
     public function actionClearExpireUser() {
         $expireTime = time() - (Yii::$app->params["checkCodeExpired"]);
-        \common\models\entities\Member::deleteAll("status = 1 AND createtime<{$expireTime}");
+        \common\models\entities\Member::deleteAll("status = 1 AND created_at<{$expireTime}");
 
         echo Yii::$app->controller->action->id . " Done!! \n\r";exit;
     }

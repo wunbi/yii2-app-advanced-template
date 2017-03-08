@@ -13,8 +13,8 @@ use yii\web\IdentityInterface;
  * @property string $email
  * @property string $name
  * @property integer $status
- * @property integer $modtime
- * @property integer $createtime
+ * @property integer $updated_at
+ * @property integer $created_at
  */
 class Member extends \common\models\entities\Base implements IdentityInterface {
 
@@ -48,8 +48,8 @@ class Member extends \common\models\entities\Base implements IdentityInterface {
                 'required'],
             [[
             'status',
-            'modtime',
-            'createtime'],
+            'updated_at',
+            'created_at'],
                 'integer'],
             [[
             'social_type'],
@@ -129,8 +129,8 @@ class Member extends \common\models\entities\Base implements IdentityInterface {
             'email'       => 'Email',
             'name'        => '真實姓名',
             'status'      => '狀態',
-            'modtime'     => '最後修改',
-            'createtime'  => '註冊時間',
+            'updated_at'     => '最後修改',
+            'created_at'  => '註冊時間',
             "captcha"     => "圖形驗證碼"
         ];
     }

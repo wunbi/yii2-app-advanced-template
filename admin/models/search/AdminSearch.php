@@ -25,8 +25,8 @@ class AdminSearch extends Admin {
             'id',
             'status',
             'role',
-            'modtime',
-            'createtime'],
+            'updated_at',
+            'created_at'],
                 'integer'],
             [[
             'username',
@@ -83,8 +83,8 @@ class AdminSearch extends Admin {
             'id'         => $this->id,
             'status'     => $this->status,
             'role'       => $this->role,
-            'modtime'    => $this->modtime,
-            'createtime' => $this->createtime,
+            'updated_at'    => $this->updated_at,
+            'created_at' => $this->created_at,
         ]);
 
         $query->andFilterWhere(['like',
