@@ -3,9 +3,9 @@ $params = require(__DIR__ . '/params.php');
 $params["staticFileUrl"] = "http://fbcommon.happygomap.com";
 
 $dbHost = "127.0.0.1";
-$dbName = "happygo_avatar";
-$dbUsername = "mkt_user";
-$dbPassword = "ddim@mkt";
+$dbName = "dbname";
+$dbUsername = "user";
+$dbPassword = "passwd";
 
 $other_config = [];
 
