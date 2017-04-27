@@ -53,6 +53,11 @@ input[type=text], input[type=password], select, textarea {
 }
 .form-group {
     margin-bottom: 30px;
+    min-height: 83px;
+}
+.imageBlock .form-group {
+    height: 0px;
+    min-height: 0px;
 }
 
 @media (min-width: 1200px){

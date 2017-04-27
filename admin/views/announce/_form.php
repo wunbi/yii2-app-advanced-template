@@ -81,31 +81,17 @@ use yii\helpers\Url;
     </div>
 
     <?php
-    $this->registerJs('var e = document.getElementById("uploadButton");
-    e.onclick = function (e) {
-        document.getElementById("announce-image").click(e)
-    }, $("#announce-image").change(function () {
-        readURL(this, $("#imageContent"))
-    })');
+    $this->registerJs("imagePreview();");
 
     ?>
     <div class="col-xs-12 col-md-12">
-        <button id="uploadButton" type="button" class="btn btn-inverse">
-            <i class="fa fa-edit"></i>上傳圖片
-            <br/>
-            建議尺寸<?= Yii::$app->params["thumbWidth"]["announce"]["width"] . " x " . Yii::$app->params["thumbWidth"]["announce"]["height"]; ?>
-        </button>
-        <img id="imageContent" src="<?= $model->image . "?v=" . time(); ?>" class="img-r200-80">
-
         <?=
-        $form->field($model, 'image', [
-            'template' => "{input}\n{error}",
-        ])->fileInput(["style" => 'height:0px; opacity:0;display:none;']);
+        $this->render("_image", ["form"  => $form,
+            "model" => $model,
+            "name"  => "image"]);
 
         ?>
     </div>
-
-
 
     <div class="col-xs-12 col-md-12 center">
         <div class="form-group">

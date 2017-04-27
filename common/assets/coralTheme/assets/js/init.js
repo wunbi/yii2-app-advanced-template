@@ -153,3 +153,13 @@ function readURL(e, t) {
         }, o.readAsDataURL(e.files[0])
     }
 }
+function imagePreview() {
+    $("body").on("click", ".uploadButton", function (e) {
+        uploadBtn = $(this);
+        fileInput = uploadBtn.siblings(".form-group").find('input:file');
+        fileInput.click();
+        fileInput.change(function () {
+            readURL(this, uploadBtn.siblings(".imageLink").children(".imageContent"));
+        })
+    });
+}
