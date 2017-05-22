@@ -33,7 +33,8 @@
         "linslin/yii2-curl": "*",
         "facebook/graph-sdk": "*",
         "kartik-v/yii2-tabs-x": "dev-master",
-        "rmrevin/yii2-minify-view": "~1.14"
+        "rmrevin/yii2-minify-view": "~1.14",
+        "rmrevin/yii2-fontawesome": "~2.17"
     },
     "require-dev": {
         "codeception/codeception": "*",

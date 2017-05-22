@@ -38,7 +38,7 @@ $config = [
         ]
     ],
     'components'          => [
-        'db'           => [
+        'db'                   => [
             'class'              => 'yii\db\Connection',
             'dsn'                => "mysql:host={$dbHost};dbname={$dbName}",
             'username'           => $dbUsername,
@@ -49,7 +49,7 @@ $config = [
             'queryCacheDuration' => 86400,
             'queryCache'         => 'cache',
         ],
-        'log'          => [
+        'log'                  => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
             'targets'    => [
                 [
@@ -64,15 +64,15 @@ $config = [
                 ],
             ],
         ],
-        'request'      => [
+        'request'              => [
             'enableCookieValidation' => true,
             'enableCsrfValidation'   => true,
             'cookieValidationKey'    => 'dbaeefa51e3fsd9f1h21670608c5fc47',
         ],
-        'cache'        => [
+        'cache'                => [
             'class' => 'yii\caching\FileCache',
         ],
-        'mailer'       => [
+        'mailer'               => [
             'class'     => 'yii\swiftmailer\Mailer',
             'transport' => [
                 'class'      => 'Swift_SmtpTransport',
@@ -84,25 +84,44 @@ $config = [
             ],
             'viewPath'  => '@common/mail',
         ],
-        'urlManager'   => [
+        'urlManager'           => [
             'enablePrettyUrl' => true,
             'showScriptName'  => false,
         //'rules'           => require(__DIR__ . '/routes.php'),
         ],
-        'assetManager' => [
+        'assetManager'         => [
             'bundles' => [
-                'yii\web\JqueryAsset' => [
-//                    'js'         => [
-//                        $params["staticFileUrl"] . '/js/jquery.min.js',
-//                    ],
+                'yii\web\JqueryAsset'                      => [
                     'sourcePath' => null, // do not publish the bundle
                     'js'         => [
-                        '//ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js',
+                        //'https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js'
+                        '//cdn.bootcss.com/jquery/2.2.4/jquery.min.js'
+                    ]
+                ],
+                '\rmrevin\yii\fontawesome\cdn\AssetBundle' => [
+                    'css' => [
+
+                        //'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'
+                        '//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css'
+                    ]
+                ],
+                'yii\bootstrap\BootstrapAsset'             => [
+                    'sourcePath' => null,
+                    'css'        => [
+                        //'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css'
+                        '//cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css'
+                    ]
+                ],
+                'yii\bootstrap\BootstrapPluginAsset'       => [
+                    'sourcePath' => null,
+                    'js'         => [
+                        //'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js'
+                        '//cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js'
                     ]
                 ],
             ],
         ],
-        'tool'         => [
+        'tool'                 => [
             'class' => 'common\components\Tool',
         ],
         'authClientCollection' => [
