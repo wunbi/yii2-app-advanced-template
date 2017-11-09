@@ -52,7 +52,7 @@
         "process-timeout": 1800
     },
     "extra": {
-        "asset-installer-paths": {
+        "config.fxp-asset.installer-paths": {
             "npm-asset-library": "vendor/npm",
             "bower-asset-library": "vendor/bower"
         }
