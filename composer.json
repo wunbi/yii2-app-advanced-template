@@ -44,7 +44,7 @@
     },
     "repositories": [
         {
-            "type": "vcs",
+            "type": "git",
             "url": "https://github.com/RockieLin/yii2-app-advanced-template"
         }
     ],
